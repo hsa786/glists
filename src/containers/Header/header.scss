@@ -1,0 +1,54 @@
+@import '../../colorpalette';
+@import '../../breakpoints';
+
+.header {
+  padding: 2rem;
+  background-color: $black;
+
+  @media (min-width: $tablet) {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+}
+
+.header__logo {
+  display: flex;
+  font-size: 4rem;
+  font-weight: 900;
+  color: $yellow;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.header__site-description {
+  font-size: 2rem;
+  position: relative;
+  display: block;
+  margin-left: 1.5rem;
+
+  &:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    animation: reveal 1s;
+    transform: scaleX(0);
+    transform-origin: right center;
+    background-color: $black;
+    pointer-events: none;
+  }
+
+  @keyframes reveal {
+    0% {
+      transform: scaleX(1);
+    }
+    100% {
+      transform: scaleX(0);
+    }
+  }
+}

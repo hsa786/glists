@@ -1,0 +1,22 @@
+@import '../../../colorpalette';
+@import '../../../breakpoints';
+
+.no-items {
+  min-height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: $tablet) {
+    min-height: 20rem;
+  }
+}
+
+.no-items__message {
+  font-size: 2rem;
+  color: rgba($yellow, 0.5);
+
+  @media (min-width: $tablet) {
+    font-size: 5rem;
+  }
+}

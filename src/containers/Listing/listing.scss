@@ -1,0 +1,23 @@
+@import '../../colorpalette';
+@import '../../breakpoints';
+
+.listing {
+  padding: 2rem;
+
+  @media (min-width: $tablet) {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+}
+
+.listing__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+}
